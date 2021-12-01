@@ -1,0 +1,108 @@
+.hori-line
+{
+    border-bottom:1px solid #424242;
+}
+.book-btn
+{
+width:auto;
+height: 40px;
+background: #29626D 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF80;
+border-radius: 20px;
+opacity: 1;
+color: #FFFFFF;
+}
+@media screen and (max-width: 1560px) {
+    .img-fluid {
+      width: auto;
+    }
+    .navbar-bg
+    {
+        height: auto;
+        width: auto;
+    }
+  }
+  body
+{
+    font-family: Roboto;
+}
+.navbar-bg
+{
+    width: auto;
+    height: 64px;
+    background: #525252 0% 0% no-repeat padding-box;
+    opacity: 0.8; 
+}
+.circle
+{
+    padding: 25px;
+    border: 1px solid #c8c8c8;
+    display: inline-block;
+    border-radius: 500px;
+    margin-bottom: 8px;
+    height:108px;
+    width: 108px;
+}
+.img-align
+{
+    height: 56px;
+    width: 56px;
+    overflow: hidden;
+    position: relative;
+}
+.work-time
+{
+    font-weight: 700;
+    font-size: 18px;
+    color: #1d7a8c;
+}
+.services
+{
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+}
+@media (max-width: 560px)
+{
+.services label {
+    width: 100%;
+}
+}
+@media (max-width: 767px)
+{
+.services label {
+    width: 33.33%;
+}
+}
+.includation
+{
+    background-color: #F6F6F6;
+}
+.text-size-include
+{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.price-color
+{
+    background-color: #29626D;
+}
+.submit-btn
+{
+width: 88px;
+height: 40px;
+background: #FF7B6D 0% 0% no-repeat padding-box;
+border-radius: 20px;
+opacity: 1;
+}
+.letter-style
+{
+   width: 233px;
+   height: 40px;
+   background: #F4F5F8 0% 0% no-repeat padding-box;
+   border: 1px solid #565656;
+   border-radius: 20px;
+   opacity: 1;
+   padding-left: 10px;
+}
