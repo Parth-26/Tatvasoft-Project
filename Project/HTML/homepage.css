@@ -149,7 +149,7 @@ opacity: 1;
 footer
 {
 width: 1560px;
-height: 195px;
+height: fit-content;
 background: #111111 0% 0% no-repeat padding-box;
 opacity: 1;
 }
