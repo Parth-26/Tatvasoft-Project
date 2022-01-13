@@ -13,37 +13,39 @@
     <body>
         <!--Navbar-->
         <header class="fixed">
-        <div>
-            <nav class="navbar navbar-bg navbar-expanded-lg">
-                <span>
-                    <img class="ps-3" src="assets/logo-small.png"/>
-                    </span>
-                    <span>
-                    <ul class="nav navbar-expanded-lg px-4 position-relative">
-                    <li class="nav-item">
-                        <button class="book-btn px-4" value="Book a Cleaner">Book now</button>
-                    </li>
-                    <li class="nav-item ps-2">
-                        <button class="book-btn px-4" value="Prices & Serices">Prices & Serices</button>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Warranty</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
+            <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img class="ps-3" src="assets/logo-small.png"/></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <button class="book-btn px-4" value="Book a Cleaner">Book now</button>
+                        </li>
+                        <li class="nav-item ps-2">
+                            <button class="book-btn px-4" value="Prices & Serices">Prices & Serices</button>
                         </li>
                         <li class="nav-item">
-                        <button class="book-btn px-4" value="Book a Cleaner">Login</button>
-                    </li>
-                    <li class="nav-item ps-2">
-                        <button class="book-btn px-4" value="Book a Cleaner">Become a helper</button>
-                    </li>
+                            <a class="nav-link text-white" href="#">Warranty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                            <button class="book-btn px-4" value="Book a Cleaner">Login</button>
+                        </li>
+                        <li class="nav-item ps-2">
+                            <button class="book-btn px-4" value="Book a Cleaner">Become a helper</button>
+                        </li>
                     </ul>
-                </span>
-            </nav>
+                  </div>
+                </div>
+              </nav>
             </div>
         </header>
         <div>
@@ -89,31 +91,6 @@
             <!--contact us over-->
             <div class="hori-line container pt-4"></div>
             <!--get in touch-->
-            <!--<section>
-            <div class=" pt-4">
-                <h3 class="text-center">Get in touch with us</h3>
-                <form class="p-4">
-                    <div>
-                        <input type="text" placeholder="First Name" class="get-in-touch-border"/>
-                        <input type="text" placeholder="Last Name"/>
-                    </div>
-                    <div>
-                        <input type="tel" placeholder="Mobile Number"/>
-                        <input type="email" placeholder="Email Address"/>
-                    </div>
-                    <select aria-placeholder="Subject">
-                        <option>Prices</option>
-                        <option>Book a Helper</option>
-                        <option>Join as a Helper</option>
-                        <option>Other</option>
-                    </select>
-                    <div>
-                    <textarea placeholder="message">Message</textarea>
-                </div>
-                <button type="submit">Submit</button>
-                </form>
-            </div>
-        </section>-->
         <section class="jumbo-section inner-page-section contact-us-form pt-4">
             <div class="container">
               <h2 class="text-center">Get in touch with us</h2>
@@ -121,22 +98,15 @@
               <!---->
               <form novalidate="" class="ng-untouched ng-pristine ng-invalid">
         
-                <!---->
-                <!---->
-        
-                <!---->
-        
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
                       <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="FirstName" maxlength="25" name="FirstName" type="text" placeholder="First name">
-                      <!---->
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
                       <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="LastName" maxlength="25" name="LastName" type="text" placeholder="Last name">
-                      <!---->
                     </div>
                   </div>
                 </div>
@@ -147,14 +117,12 @@
                         <span class="input-group-addon">+49</span>
                         <input class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="PhoneNumber" maxlength="20" name="PhoneNumber" type="text" placeholder="Mobile number">
                       </div>
-                      <!---->
                     </div>
                   </div>
         
                   <div class="col-sm-6">
                     <div class="form-group">
                       <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Email" maxlength="100" name="Email" type="text" placeholder="Email address">
-                      <!---->
                     </div>
                   </div>
                 </div>
@@ -162,13 +130,12 @@
                   <div class="col-sm-12">
                     <div class="form-group">
                       <select class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="SubjectTypeId">
-                        <!----><option value="1">
+                        <option value="1">
                           Book a helper</option><option value="2">
                           Prices</option><option value="7">
                           Join as a helper</option><option value="9">
                           other</option>
                       </select>
-                      <!---->
                     </div>
                   </div>
                 </div>
@@ -176,14 +143,12 @@
                   <div class="col-sm-12">
                     <div class="form-group">
                       <textarea class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Message" maxlength="1000" rows="5" placeholder="Message"></textarea>
-                      <!---->
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-12 text-center">
                   <button class="btn btn-primary btn-lg" data-dismiss="msg" type="submit" disabled="">Submit</button>
                 </div>
-        
               </form>
             </div>
           </section>
