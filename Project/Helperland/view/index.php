@@ -1,24 +1,30 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>
             Homepage|HelperHand
         </title>
-        <?php 
-        echo "<link type='text/css' rel='stylesheet' href='assets\css\homepage.css'>"?>
+        <style>
+          <?php 
+          include "assets/css/homepage.css";
+          
+          ?>
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/homepage.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
     </head>
-    <body class="homepage_bg">
+   <body class="homepage_bg">
       <!--navbar-->
-        <div>
             <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img class="ps-3" src="assets\images\logo-small.png"/></a>
+                  <a class="navbar-brand" href="index.php"> 
+                  <img class='ps-3' src='./assets/images/logo-large.png'/>
+                </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -28,7 +34,7 @@
                             <button class="book-btn" value="Book a Cleaner">Book a Cleaner</button>
                         </li>
                         <li class="nav-item ps-2">
-                            <a class="nav-link text-white" href="prices.html">Prices</a>
+                            <a class="nav-link text-white" href="price.php">Prices</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Our Guarantee</a>
@@ -37,7 +43,7 @@
                             <a class="nav-link text-white" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="contact.html">Contact Us</a>
+                            <a class="nav-link text-white" href="contact.php">Contact Us</a>
                             </li>
                             <li class="nav-item">
                                 <button class="book-btn" value="Book a Cleaner">Login</button>
@@ -61,81 +67,77 @@
                 </div>
               </nav>
 </header>
+<section>
             <div class="text-white p-5">
             <p class="fs-1">Lorem ipsum text</p>
             <div><img class="d-inline p-2" src="assets\images\ic-check.png"/><p class="d-inline p-2">Lorem ipsum dolor sit amet, consectetur adipisicing</p></div>
             <div><img class="d-inline p-2" src="assets\images\ic-check.png"/><p class="d-inline p-2">Lorem ipsum dolor sit amet, consectetur adipisicing</p></div>
             <div><img class="d-inline p-2" src="assets\images\ic-check.png"/><p class="d-inline p-2">Lorem ipsum dolor sit amet, consectetur adipisicing</p></div>
             </div>
-            <div class="center-btn"> 
+            <div class="center-btn d-flex justify-content-center"> 
             <button class="lets-book">Let's Book a Cleaner</button>
             </div>
-            <div class="step d-flex text-white">
-                <span class="p-4">
-                    <img class="p-4" src="assets\images\step-1.png"/>
-                    <p class="g-col-2">Enter your postcode</p>
+            <div class="d-flex text-white justify-content-center text-center py-4">
+                <div class="row">
+                <span class="col-lg">
+                    <img src="assets\images\step-1.png"/>
+                    <p class="text-center">Enter your postcode</p>
                 </span>
-                <span class="align-arrow-center"><img class="p-4" src="assets\images\step-arrow-1.png"/></span>
-                <span class="p-4">
-                <img class="p-4" src="assets\images\step-2.png"/>
-                <p class="g-col-2">Select your plan</p>
+                <span class="col-lg">
+                <img src="assets\images\step-arrow-1.png"/>'</span>
+                <span class="col-lg">
+                <img  src="assets\images\step-2.png"/>
+                <p class="text-center">Select your plan</p>
                 </span>
-                <span class="align-arrow-center"><img class="p-4" src="assets\images\step-arrow-1-copy.png"/></span>
-                <span class="p-4">
-                <img class="p-4" src="assets\images\step-3.png"/>
-                <p class="g-col-2">Pay securely online</p>
+                <span class="col-lg">
+                    <img src="assets\images\step-arrow-1-copy.png"/></span>
+                <span class="col-lg">
+                <img src="assets\images\step-3.png"/>
+                <p class="text-center">Pay securely online</p>
                 </span>
-                <span class="align-arrow-center"><img class="p-4" src="assets\images\step-arrow-1.png"/></span>
-                <span class="p-4">
-                <img class="p-4" src="assets\images\step-4.png"/>
-                <p class="g-col-2">Enjoy amazing service</p>
+                <span class="col-lg">
+                    <img src="assets\images\step-arrow-1.png"/></span>
+                <span class="col-lg">
+                <img src="assets\images\step-4.png"/>
+                <p class="text-center">Enjoy amazing service</p>
                 </span>
             </div>
-            <img class="center" src="assets\images\group-18_5.png"/>
+            </div>
+            <div class="d-flex justify-content-center py-4">
+            <img class="justify-content-center" src="assets\images\group-18_5.png"/>
         </div>
+    </section>
         <!--Why Helperland-->
-        <div class="bg-white text-color">
-            <p class="fs-2 fw-bold text-alignment">Why Helperland</p>
-            <div class="container gap-2">
+        <section class="bg-white text-color">
+            <p class="fs-2 fw-bold text-center py-4">Why Helperland</p>
+            <div class="d-flex">
+            <div class="container gap-2 py-4 justify-content-center">
                 <div class="row justify-content-evenly">
-                    <div class="col-3">
+                    <div class="col-lg-3">
                         <img src="assets\images\helper-img.png"/>
+                        <p class="fs-4 fw-bold">Experience and Vetted Professionals</p>
+                        <p class="fs-6">dominate the industry in scale and scope with an adaptable, extensive network that consistently delivers exceptional results.</p>  
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3">
                         <img src="assets\images\group-23.png"/>
+                        <p class="fs-4 fw-bold">Secure Online Payment</p>
+                        <p class="fs-6">Payment is processed securely online.Customers pay safely online nd manage the bookings.</p>
                     </div>
-                    <div class="col-3">
-                        <img src="assets\images\group-24.png"/>
-                    </div>
-                </div>
-                <div class="row justify-content-evenly fs-3 fw-bold">
-                    <div class="col-3">
-                      <p>Experience and Vetted Professionals</p>  
-                    </div>
-                    <div class="col-3">
-                        <p>Secure Online Payment</p>
-                    </div>
-                    <div class="col-3">
-                        <p>Dedicated Customer Service</p>
-                    </div>
-                </div>
-                <div class="row justify-content-evenly fs-6">
-                    <div class="col-3">
-                      <p>dominate the industry in scale and scope with an adaptable, extensive network that consistently delivers exceptional results.</p>  
-                    </div>
-                    <div class="col-3">
-                        <p>Payment is processed securely online.Customers pay safely online nd manage the bookings.</p>
-                    </div>
-                    <div class="col-3">
-                        <p>to our customers and are guided in all we do by their needs. The team is always happy to support you and offer all the information.</p>
+                    <div class="col-lg-3">
+                        <?php echo '<img src="assets\images\group-24.png"/>' ?>
+                        <p class="fs-4 fw-bold">Dedicated Customer Service</p>
+                        <p class="fs-6">to our customers and are guided in all we do by their needs. The team is always happy to support you and offer all the information.</p>
                     </div>
                 </div>
             </div>
+        </div>
+        </section>
+        <section class="bg-white">
             <div class="d-flex">
-                <img class="justify-content-left d-inline"src="assets\images\blog-left-bg.png"/>
+                <img class="justify-content-left d-inline" src="assets\images\blog-left-bg.png"/>
                 <div class="d-inline">
                     <div class="row  justify-content-center">
-                        <div class="col-6">
+                        <div class="col-lg-6">
                             <p class="fs-2 fw-bold">
                                 Lorem ipsum dolor sit amet, consectetur
                             </p>
@@ -149,14 +151,14 @@
                                  Mauris consequat ornare enim, sed lobortis quam ultrices sed.
                             </p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6">
                             <img src="assets\images\group-36.png"/>
                         </div>
                     </div>
 
                     <!--Our Blog-->
                     <div>
-                        <p class="fs-3 fw-bold text-alignment">Our Blog</p>
+                        <p class="fs-3 fw-bold text-center py-4">Our Blog</p>
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
                               <div class="card">
@@ -172,7 +174,6 @@
                                 </div>
                               </div>
                             </div>
-                            <!--review-->
                             <div class="col">
                               <div class="card">
                                 <img src="assets\images\group-29.png" class="card-img-top" alt="...">
@@ -206,10 +207,11 @@
                 </div>
                 <img class="justify-content-right d-inline"src="assets\images\blog-right-bg.png"/>
             </div>
-
+        </section>
             <!--Customer review-->
+            <section>
             <div class="cust-review">
-                <h3 class="text-alignment">What Our Custmer Say</h3>
+                <h3 class="text-center py-4">What Our Custmer Say</h3>
                 <div class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
@@ -297,7 +299,7 @@
         </div>
     </div>
         </div>
-        </div>
+    </section>
         <!--Footer-->
         <footer class="bg-dark">
           <nav class="navbar">
@@ -307,16 +309,16 @@
                   <span>
                   <ul class="nav px-4">
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="#">HOME</a>
+                      <a class="nav-link text-white" href="index.php">HOME</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="#">ABOUT</a>
+                      <a class="nav-link text-white" href="about.php">ABOUT</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link text-white" href="#">TESTIMONIALS</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="#">FAQS</a>
+                      <a class="nav-link text-white" href="faqs.php">FAQS</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link text-white" href="#">INSURANCE POLICY</a>

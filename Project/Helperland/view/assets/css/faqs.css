@@ -35,7 +35,12 @@ color: #FFFFFF;
 }
 .faq-btn
 {
-   background-color: #1D7A8C !important;
+    background-color: #FFFFFF;
+    color:black !important;
+}
+.active{
+    background-color: #1D7A8C !important;
+    color: #FFFFFF !important;
 }
 .sep
 {
@@ -44,4 +49,7 @@ color: #FFFFFF;
 .hori-line
 {
     border-bottom:1px solid #424242;
+}
+a{
+    text-decoration: none;
 }
