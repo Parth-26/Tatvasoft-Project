@@ -33,25 +33,25 @@
                         <li class="nav-item">
                             <button class="book-btn" value="Book a Cleaner">Book a Cleaner</button>
                         </li>
-                        <li class="nav-item ps-2">
-                            <a class="nav-link text-white" href="price.php">Prices</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white hover-link" href="price.php">Prices</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Our Guarantee</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white hover-link" href="#">Our Guarantee</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Blog</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white hover-link" href="#">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="contact.php">Contact Us</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white hover-link" href="contact.php">Contact Us</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-2">
                                 <button class="book-btn" value="Book a Cleaner">Login</button>
                         </li>
-                        <li class="nav-item ps-2">
+                        <li class="nav-item px-2">
                             <button class="book-btn" value="Book a Cleaner">Become a helper</button>
                         </li>
-                        <li class="nav-item ps-2">
+                        <li class="nav-item px-2">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>

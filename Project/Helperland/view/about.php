@@ -4,7 +4,7 @@
         <title>
             FAQs | Helperland
         </title>
-        <link type="text/css" rel="stylesheet" href="about.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/about.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
         <header>
         <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="inex.php"><img class="ps-3" src="assets/logo-small.png"/></a>
+              <a class="navbar-brand" href="index.php"><img class="ps-3" src="assets/images/logo-small.png"/></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -49,7 +49,7 @@
           </nav>
             <!--header image-->
             <div>
-                <img class="img-fluid" src="assets/hero-banner-img.png" alt="Banner Image">
+                <img class="img-fluid" src="assets/images/hero-banner-img.png" alt="Banner Image">
             </div>
         </header>
         <!--about content-->
@@ -58,9 +58,9 @@
             <div class="text-center">
             <h2 class="pt-4">A Few words about us</h2>
             <span>
-                <img class="pe-2" src="assets/rectangle-5.png"/>
-                <img src="assets/forma-1-copy-5.png"/>
-                <img class="ps-2" src="assets/rectangle-5.png"/>
+                <img class="pe-2" src="assets/images/rectangle-5.png"/>
+                <img src="assets/images/forma-1-copy-5.png"/>
+                <img class="ps-2" src="assets/images/rectangle-5.png"/>
             </span>
             <div class="pt-4">
                 <p>
@@ -80,9 +80,9 @@
                         <div class="text-center">
                         <h2 class="pt-4">Our Story</h2>
                         <span>
-                            <img class="pe-2" src="assets/rectangle-5.png"/>
-                            <img src="assets/forma-1-copy-5.png"/>
-                            <img class="ps-2" src="assets/rectangle-5.png"/>
+                            <img class="pe-2" src="assets/images/rectangle-5.png"/>
+                            <img src="assets/images/forma-1-copy-5.png"/>
+                            <img class="ps-2" src="assets/images/rectangle-5.png"/>
                         </span>
                         <div class="pt-4">
                             <p>
@@ -116,7 +116,7 @@
             <footer class="bg-dark">
                 <nav class="navbar navbar-expanded-lg">
                     <span>
-                        <img class="ps-3" src="assets/logo-small.png"/>
+                        <img class="ps-3" src="assets/images/logo-small.png"/>
                         </span>
                         <span>
                         <ul class="nav px-4">
@@ -141,7 +141,7 @@
                         </ul>
                     </span>
                     <span>
-                        <img src="assets/ic-facebook.png"/>
+                        <img src="assets/images/ic-facebook.png"/>
                         <img class="ps-3 pe-5" src="assets/ic-instagram.png"/>
                     </span>
                 </nav>

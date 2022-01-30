@@ -15,6 +15,20 @@ height: 130px;
 background: transparent 0% 0% no-repeat padding-box;
 opacity: 1;
 }
+.hover-link:hover{
+top: 43px;
+left: 620px;
+width:auto;
+padding-left: 5%;
+padding-right: 5%;
+height: 40px;
+background: #29626D 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF80;
+border-radius: 20px;
+opacity: 1;
+text-align: center;
+color: #FFFFFF;
+}
 .book-btn
 {
 top: 43px;
@@ -26,6 +40,11 @@ border: 1px solid #FFFFFF80;
 border-radius: 20px;
 opacity: 1;
 color: #FFFFFF;
+}
+.book-btn:hover
+{
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   color: #000000;
 }
 .nav-text
 {

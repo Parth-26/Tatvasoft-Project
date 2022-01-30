@@ -37,7 +37,8 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="index.php"><img class="ps-3" src="assets/logo-small.png"/></a>
+                  <a class="navbar-brand" href="index.php">
+                    <img class="ps-3" src="assets/images/logo-small.png"/></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -56,7 +57,7 @@
                             <a class="nav-link text-white" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="contact.php" onClick="exit()">">Contact</a>
+                            <a class="nav-link text-white" href="contact.php">Contact</a>
                             </li>
                             <li class="nav-item">
                             <button class="book-btn px-4" value="Book a Cleaner">Login</button>
@@ -70,7 +71,7 @@
               </nav>
             <!--header image-->
             <div>
-                <img class="img-fluid" src="assets/faq-banner.png" alt="FAQ Image">
+                <img class="img-fluid" src="assets/images/faq-banner.png" alt="FAQ Image">
             </div>
         </header>
         <!--FAQ content-->
@@ -78,9 +79,9 @@
             <div class="text-center">
             <h2 class="pt-4">FAQs</h2>
             <span>
-                <img class="pe-2" src="assets/rectangle-5.png"/>
-                <img src="assets/forma-1-copy-5.png"/>
-                <img class="ps-2" src="assets/rectangle-5.png"/>
+                <img class="pe-2" src="assets/images/rectangle-5.png"/>
+                <img src="assets/images/forma-1-copy-5.png"/>
+                <img class="ps-2" src="assets/images/rectangle-5.png"/>
 
             </span>
             </div>
@@ -183,7 +184,7 @@
             <footer class="bg-dark fixed">
                 <nav class="navbar">
                     <span>
-                        <img class="ps-3" src="assets/logo-small.png"/>
+                        <img class="ps-3" src="assets/images/logo-small.png"/>
                         </span>
                         <span>
                         <ul class="nav px-4">
@@ -208,8 +209,8 @@
                         </ul>
                     </span>
                     <span>
-                        <img src="assets/ic-facebook.png"/>
-                        <img class="ps-3 pe-5" src="assets/ic-instagram.png"/>
+                        <img src="assets/images/ic-facebook.png"/>
+                        <img class="ps-3 pe-5" src="assets/images/ic-instagram.png"/>
                     </span>
                 </nav>
                 <div class="hori-line container pb-1"></div>
