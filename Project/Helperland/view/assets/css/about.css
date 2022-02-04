@@ -11,12 +11,14 @@ body
 }
 .book-btn
 {
-width:auto;
+width:1000px;
 height: 40px;
 background: #29626D 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF80;
 border-radius: 20px;
 opacity: 1;
+padding-left: 10%;
+padding-right: 10%;
 color: #FFFFFF;
 }
 @media screen and (max-width: 1560px) {
@@ -32,10 +34,6 @@ color: #FFFFFF;
 .border-col
 {
     border-bottom-color: #1D7A8C !important;
-}
-.faq-btn
-{
-   background-color: #1D7A8C !important;
 }
 .sep
 {

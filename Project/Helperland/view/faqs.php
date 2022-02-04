@@ -1,32 +1,15 @@
+<?php
+
+$base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
+
+?>
 <!Doctype HTML>
 <html>
     <head>
         <title>
             FAQs | Helperland
         </title>
-        <style>
-          <?php 
-          include "assets/css/faqs.css";
-          ?>
-        </style>
-        <script>
-            function avtive(){
-            document.getElementById('#faq').click(function()
-{
-    if ( $(this).hasClass('active') ) {
-        $(this).removeClass('active');
-    } else {
-        $('li a.active').removeClass('active');
-        $(this).addClass('active');    
-    }
-});
-            };
-            function shocontent()
-            {
-                documrnt.
-            }
-        </script>
-        <link type="text/css" rel="stylesheet" href="faqs.css">
+        <link type="text/css" rel="stylesheet" href="view/assets/css/faqs.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -34,54 +17,26 @@
     </head>
     <body>
         <!--Navbar-->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="index.php">
-                    <img class="ps-3" src="assets/images/logo-small.png"/></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <button class="book-btn px-4" value="Book a Cleaner">Book now</button>
-                        </li>
-                        <li class="nav-item ps-2">
-                            <button class="book-btn px-4" value="Prices & Serices">Prices & Serices</button>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Warranty</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="contact.php">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                            <button class="book-btn px-4" value="Book a Cleaner">Login</button>
-                        </li>
-                        <li class="nav-item ps-2">
-                            <button class="book-btn px-4" value="Book a Cleaner">Become a helper</button>
-                        </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
+        <?php 
+        include "header.php";
+        
+        ?>
+        <main>
             <!--header image-->
-            <div>
-                <img class="img-fluid" src="assets/images/faq-banner.png" alt="FAQ Image">
-            </div>
-        </header>
+            <section>
+                <img class="img-fluid" src="view/assets/images/faq-banner.png" alt="Banner Image">
+</section>
+        <?php
+            include('login.php');
+            ?>
         <!--FAQ content-->
         <div class="container-xl">
             <div class="text-center">
             <h2 class="pt-4">FAQs</h2>
             <span>
-                <img class="pe-2" src="assets/images/rectangle-5.png"/>
-                <img src="assets/images/forma-1-copy-5.png"/>
-                <img class="ps-2" src="assets/images/rectangle-5.png"/>
+                <img class="pe-2" src="view/assets/images/rectangle-5.png"/>
+                <img src="view/assets/images/forma-1-copy-5.png"/>
+                <img class="ps-2" src="view/assets/images/rectangle-5.png"/>
 
             </span>
             </div>
@@ -180,44 +135,13 @@
   </div>
 </div>
 </div>
+</div>
+</main>
             <!--Footer-->
             <footer class="bg-dark fixed">
-                <nav class="navbar">
-                    <span>
-                        <img class="ps-3" src="assets/images/logo-small.png"/>
-                        </span>
-                        <span>
-                        <ul class="nav px-4">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="about.php">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">TESTIMONIALS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="faqs.php">FAQS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">INSURANCE POLICY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">IMPRESSUM</a>
-                        </li>
-                        </ul>
-                    </span>
-                    <span>
-                        <img src="assets/images/ic-facebook.png"/>
-                        <img class="ps-3 pe-5" src="assets/images/ic-instagram.png"/>
-                    </span>
-                </nav>
-                <div class="hori-line container pb-1"></div>
-                <div class="container text-center pt-2">
-                    <span class="text-white">@2018 Helperland All rights reserved</span>
-                    <span>&nbsp <a class="text-white" href="#">Terms and Conditions</a> <span class="sep px-1"></span> <a class="text-white" href="#">Privacy Policy</a></span>
-                </div>
+               <?php
+               include('footer.php');
+               ?>
               </footer>
     </body>
 </html>
