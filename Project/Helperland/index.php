@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $controller='User';
 $function='home';
 $parameter='';

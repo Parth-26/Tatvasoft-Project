@@ -40,6 +40,10 @@ class UserController
     {
         include('view/sp-sign-up.php');
     }
+    public function book()
+    {
+        include("view/book.php");
+    }
     public function contact_data()
     {
         if (isset($_POST)) {
@@ -127,10 +131,14 @@ class UserController
                 'email' => $_POST['Email'],
                 'passwd' => $_POST['passwd'],
             ];
-           $passwd = $this->model->login_user('user', $array);
-           if($_POST['passwd']===$passwd)
+           $result = $this->model->login_user('user', $array);
+           $user=$result['UserID'];
+           $pass=$result['Password'];
+           $_SESSION['userid']=$user;
+           $message=$_SESSION['userid'];
+           if($_POST['passwd']===$pass)
            {
-               echo "<script>alert('Login Successful');</script>";
+               echo "<script>alert($message);</script>";
            }
            else
            {

@@ -74,13 +74,13 @@ function login_user($table,$array)
 {
     $email=$array['email'];
     $pass=$array['passwd'];
-    $sql = "SELECT Password FROM user WHERE Email='$email'";
+    $sql = "SELECT UserID, Password FROM $table WHERE Email='$email'";
    // echo $sql;
     $password = $this->conn->query($sql);
     if (mysqli_num_rows($password) > 0) {
         $result=$password->fetch_assoc();
         //echo "Password: " . $result['Password'];
-        return $result['Password'];
+        return $result;
       } else {
           echo $this->conn->query($sql);
        // echo "Error: " . $sql . "<br>" . $this->conn->error;

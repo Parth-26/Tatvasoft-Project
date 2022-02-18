@@ -16,7 +16,7 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </head>
-   <body class="homepage_bg" style="background-image: url('view/assets/images/Landing-Page-background-image.png')">
+   <body id="top" class="homepage_bg" style="background-image: url('view/assets/images/Landing-Page-background-image.png')">
       <!--navbar-->
             <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
@@ -29,8 +29,8 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
                   </button>
                   <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <button class="book-btn py-1" value="Book a Cleaner">Book a Cleaner</button>
+                        <li class="nav-item py-1">
+                        <a href="<?= $base_url.'?controller=User&function=book'?>"><button class="book-btn py-1" value="Book a Cleaner">Book a Cleaner</button></a>
                         </li>
                         <li class="nav-item px-2 py-1">
                             <a class="nav-link text-white hover-link" href="<?= $base_url.'?controller=User&function=prices'?>"><lable class="px-2">Prices</lable></a>
@@ -53,18 +53,9 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
                             ?>
                         </li>
                         <li class="nav-item px-2 py-1">
-                            <a class="book-btn" value="Book a Cleaner" href="<?= $base_url.'?controller=User&function=sp_sign_up'?>">Become a helper</a>
-                        </li>
-                        <li class="nav-item px-2 py-1">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" href="#"><img class="ps-1" src="view/assets\images\ic-flag.png"/></a></li>
-                                  <li><a class="dropdown-item" href="#"><img class="ps-1" src="view/assets\images\ic-flag.png"/></a></li>
-                                  <li><a class="dropdown-item" href="#"><img class="ps-1" src="view/assets\images\ic-flag.png"/></a></li>
-                                </ul>
-                              </div>
+                        <a class="text-decoration-none" value="Book a Cleaner" href="<?= $base_url.'?controller=User&function=sp_sign_up'?>"><button class="book-btn px-4" value="Book a Cleaner">
+                      Become a helper
+                    </button></a>
                         </li>
                     </ul>
                   </div>
@@ -108,11 +99,12 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
             </div>
             </div>
             <div class="d-flex justify-content-center py-4">
-            <img class="justify-content-center" src="view/assets\images\group-18_5.png"/>
+              <a href="#why">
+            <img class="justify-content-center" src="view/assets\images\group-18_5.png"/></a>
         </div>
     </section>
         <!--Why Helperland-->
-        <section class="bg-white text-color">
+        <section class="bg-white text-color" id="why">
             <p class="fs-2 fw-bold text-center py-4">Why Helperland</p>
             <div class="d-flex">
             <div class="container gap-2 py-4 justify-content-center">
@@ -284,9 +276,9 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
             <div>
             <div class="row row-cols-4 pb-5">
             <div class="col ms-5 pt-5">
-                <button class="up-btn">
+                <a href="#top"><button class="up-btn">
                 <img src="view/assets\images\forma-1.png"/>
-                </button>
+                </button></a>
             </div>
             <div class="col-4 pt-5">
                 <h3>GET OUR NEWSLETTER</h3>

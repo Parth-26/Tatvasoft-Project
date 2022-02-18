@@ -17,7 +17,6 @@
 include('header.php');
 ?>
 <main>
-
           <section id="sp-sign-up" class="jumbo-section inner-page-section contact-us-form py-4 d-flex justify-content-center" style="background-image: url('view/assets/images/become-a-pro-banner.png');"">
           <div class="card py-4 px-4">
             <div class="container">
@@ -62,9 +61,12 @@ include('header.php');
           <section class="text-center pt-3 pb-5">
               <img class="img-fluid" src="view/assets/images/group-18_5.png">
         </section>
+        <?php
+include "login.php";
+?>
         <!--How it works-->
         <section>
-            <div class="row d-flex w-auto bg-white py-5">
+            <div class="row d-flex w-auto bg-white py-2">
                     <img class="col col-sm-2 img-fluid" src="view/assets/images/blog-left-bg.png">
                 <div class="col col-xl">
                     <h2 class="text-center">How it works</h2>

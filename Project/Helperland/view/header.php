@@ -16,7 +16,7 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
               <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item ps-2 py-1">
-                    <button class="book-btn px-4" value="Book a Cleaner">Book now</button>
+                <a class="text-decoration-none" Style="color:white;" href="<?= $base_url.'?controller=User&function=book'?>"><button class="book-btn px-4" value="Book a Cleaner">Book now</button></a>
                 </li>
                 <li class="nav-item ps-2 py-1">
                 <a class="nav-link text-white hover-link" href="<?= $base_url.'?controller=User&function=prices'?>"><lable class="px-2">Prices and Services</lable></a>
@@ -36,9 +36,9 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
                             </button>                    
                 </li>
                 <li class="nav-item ps-2 py-1">
-                      <a class="px-4 book-btn" value="Book a Cleaner" href="<?= $base_url.'?controller=User&function=sp_sign_up'?>">
+                <a class="text-decoration-none" value="Book a Cleaner" href="<?= $base_url.'?controller=User&function=sp_sign_up'?>"><button class="book-btn px-4" value="Book a Cleaner">
                       Become a helper
-                    </a>
+                    </button></a>
                 </li>
                 </ul>
               </div>
