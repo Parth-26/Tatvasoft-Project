@@ -22,16 +22,19 @@ if(isset($_GET['msg'])){
     <body>
         <!--Navbar-->
         <?php 
-        include "header.php";
-        
-        ?>
+  if($_SESSION['loggedin'] == 1)
+  {
+    include('view/header2.php'); 
+  }
+  else{
+  include('view/header.php'); 
+}
+include('view/login.php');
+  ?>
         <main>
               <setion>
                   <img class="img-fluid" src="view/assets/images/group-16_2.png" alt="Worker Image">
               </section>
-            <?php
-            include('login.php');
-            ?>
             <div class="container">
             <!--contact us-->
             <section>

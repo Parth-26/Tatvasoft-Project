@@ -29,6 +29,6 @@ color: #FFFFFF;
 }
 .book-btn a{
     text-decoration: none;
-    width: 170px;
+    width: auto;
     height: 40px;
 }

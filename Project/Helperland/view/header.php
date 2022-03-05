@@ -3,7 +3,9 @@
 $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
 ?>
 <style>
-  <?php include 'assets/header.css';?>
+  <?php include 'assets/header.css';
+  
+  ?>
   </style>
 
 <header class="homepage_bg">
@@ -33,8 +35,10 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
                 <li class="nav-item ps-2 py-1">
                      <button type="button" class="book-btn text-center" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                             Login
-                            </button>                    
+                            </button> 
+                                      
                 </li>
+                 
                 <li class="nav-item ps-2 py-1">
                 <a class="text-decoration-none" value="Book a Cleaner" href="<?= $base_url.'?controller=User&function=sp_sign_up'?>"><button class="book-btn px-4" value="Book a Cleaner">
                       Become a helper
@@ -44,4 +48,6 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
               </div>
             </div>
           </nav>
+          
 </header>
+ 

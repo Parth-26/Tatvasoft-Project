@@ -1,8 +1,8 @@
 <?php
 
-$base_url='http://localhost/Tatvasoft-Project/Project/Helperland/index.php/';
+$base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
 
 // 1 = customer, 2 = servicer, 3 = admin
-const USER_TYPE = [1,2,3];
+//const USER_T = [1,2,3];
 
 ?>

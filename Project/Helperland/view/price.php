@@ -18,17 +18,20 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
     <body>
         <!--Navbar-->
         <?php 
-        include "header.php";
-        
-        ?>
+  if($_SESSION['loggedin'] == 1)
+  {
+    include('view/header2.php'); 
+  }
+  else{
+  include('view/header.php'); 
+}
+include('view/login.php');
+  ?>
         <main>
             <!--header image-->
             <section>
                 <img class="img-fluid" src="view/assets/images/group-18.png" alt="Banner Image">
 </section>
-        <?php
-            include('login.php');
-            ?>
             <!--Prices-->
             <section>
                 <div class="text-center">

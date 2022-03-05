@@ -3,6 +3,7 @@
 $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
 
 ?>
+<footer class="bg-dark">
 <nav class="navbar">
               <span>
                   <img class="ps-1" src="view/assets\images\logo-small.png"/>
@@ -39,3 +40,4 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
               <span class="text-white">@2018 Helperland All rights reserved</span>
               <span>&nbsp <a class="text-white" href="#">Terms and Conditions</a> <span class="sep px-1"></span> <a class="text-white" href="#">Privacy Policy</a></span>
           </div>
+          </footer>

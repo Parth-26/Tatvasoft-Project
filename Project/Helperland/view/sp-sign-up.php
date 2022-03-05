@@ -15,6 +15,7 @@
       <!--navbar-->
 <?php
 include('header.php');
+include('view/login.php');
 ?>
 <main>
           <section id="sp-sign-up" class="jumbo-section inner-page-section contact-us-form py-4 d-flex justify-content-center" style="background-image: url('view/assets/images/become-a-pro-banner.png');"">
@@ -61,9 +62,6 @@ include('header.php');
           <section class="text-center pt-3 pb-5">
               <img class="img-fluid" src="view/assets/images/group-18_5.png">
         </section>
-        <?php
-include "login.php";
-?>
         <!--How it works-->
         <section>
             <div class="row d-flex w-auto bg-white py-2">

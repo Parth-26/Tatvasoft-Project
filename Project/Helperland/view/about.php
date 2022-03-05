@@ -19,16 +19,20 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
         
         <!--Navbar-->
         <?php 
-        include "header.php";
-        
-        ?>
+  if($_SESSION['loggedin'] == 1)
+  {
+    include('view/header2.php'); 
+  }
+  else{
+  include('view/header.php'); 
+}
+  ?>
+  <?php include 'view/login.php';?> 
         <main>
         <section>
                 <img class="img-fluid" src="view/assets/images/hero-banner-img.png" alt="Banner Image">
 </section>
-        <?php
-            include('login.php');
-            ?>
+        
         <!--about content-->
         <section>
             

@@ -1,5 +1,5 @@
-<?php
 
+<?php
 $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
 
 
@@ -11,9 +11,8 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
   }
   </style>
 <!-- Modal -->
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel1">Login</h5>
@@ -41,20 +40,11 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
         <a class="d-block" href="<?= $base_url.'?controller=User&function=create_acc'?>">Create Account</a>
       </div>
       </div>
-      <div class="modal-footer">
-      <a href="#" class="d-block" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-dismiss="modal">
-          Forgot Password ?
-        </a>
-        <label class="d-block">Don't have an account yet?</label>
-        <a class="d-block" href="<?= $base_url.'?controller=User&function=create_acc'?>">Create Account</a>
-      </div>
     </div>
   </div>
 </div>
-</div>
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered ">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel2">Login</h5>
@@ -79,5 +69,4 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
       </div>
     </div>
   </div>
-</div>
 </div>

@@ -44,6 +44,34 @@ class UserController
     {
         include("view/book.php");
     }
+    public function consumer_service_history()
+    {
+        include("view/consumer/consumer_service_history.php");
+    }
+    public function consumer_dashboard()
+    {
+        include("view/consumer/consumer_dashboard.php");
+    }
+    public function consumer_invoice()
+    {
+        include("view/consumer/consumer_invoice.php");
+    }
+    public function consumer_fav_pro()
+    {
+        include("view/consumer/consumer_fav_pro.php");
+    }
+    public function consumer_notification()
+    {
+        include("view/consumer/consumer_notification.php");
+    }
+    public function my_acc()
+    {
+        include("view/consumer/my_acc.php");
+    }
+    public function logout()
+    {
+        include("view/logout.php");
+    }
     public function contact_data()
     {
         if (isset($_POST)) {
@@ -134,11 +162,13 @@ class UserController
            $result = $this->model->login_user('user', $array);
            $user=$result['UserID'];
            $pass=$result['Password'];
-           $_SESSION['userid']=$user;
-           $message=$_SESSION['userid'];
            if($_POST['passwd']===$pass)
            {
-               echo "<script>alert($message);</script>";
+            $_SESSION['userid']=$user;
+            $message=$_SESSION['userid'];
+            $_SESSION['name']=$result['FirstName'].' '.$result['LastName'];
+            $_SESSION['loggedin']=1;
+            header('Location: ' . $base_url.'?controller=User&function=consumer_service_history');
            }
            else
            {
@@ -148,6 +178,11 @@ class UserController
         } else {
             echo 'Error Occured Try Again';
         }
+    }
+    public function booking()
+    {
+        $postal=$_POST['postal'];
+        echo $postal;
     }
 }
 ?>

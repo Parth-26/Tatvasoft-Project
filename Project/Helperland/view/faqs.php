@@ -18,17 +18,21 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
     <body>
         <!--Navbar-->
         <?php 
-        include "header.php";
-        
-        ?>
+  if($_SESSION['loggedin'] == 1)
+  {
+    include('view/header2.php'); 
+  }
+  else{
+  include('view/header.php'); 
+}
+include('view/login.php')
+  ?>
+
         <main>
             <!--header image-->
             <section>
                 <img class="img-fluid" src="view/assets/images/faq-banner.png" alt="Banner Image">
 </section>
-        <?php
-            include('login.php');
-            ?>
         <!--FAQ content-->
         <div class="container-xl">
             <div class="text-center">
@@ -55,7 +59,7 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
             </ul>
             </div>
 <div class="tab-content container" id="myTabContent">
-  <div class="tab-pane fade show active c id="custfaq" role="tabpanel" aria-labelledby="cust">
+  <div class="tab-pane fade show active" id="custfaq" role="tabpanel" aria-labelledby="cust">
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h5 class="accordion-header" id="flush-headingOne">
@@ -138,10 +142,9 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
 </div>
 </main>
             <!--Footer-->
-            <footer class="bg-dark fixed">
+            
                <?php
                include('footer.php');
                ?>
-              </footer>
     </body>
 </html>

@@ -13,7 +13,9 @@
         <header>
             <?php
             include('header.php');
+            include('view/login.php');
             ?>
+            
 </header>
         <section>
             <div class="text-center">
