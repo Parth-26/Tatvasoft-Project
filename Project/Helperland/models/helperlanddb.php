@@ -86,8 +86,24 @@ function login_user($table,$array)
        // echo "Error: " . $sql . "<br>" . $this->conn->error;
       }
 }
+function forgot_pass($table,$array)
+{
+  $email=$array['email'];
+  $sql = "SELECT * FROM $table WHERE Email='$email'";
+   // echo $sql;
+    $result = $this->conn->query($sql);
+    if (mysqli_num_rows($result) > 0) {
+        $user=$result->fetch_assoc();
+        //echo "Password: " . $result['Password'];
+        return $user;
+      } else {
+          echo $this->conn->query($sql);
+       // echo "Error: " . $sql . "<br>" . $this->conn->error;
+      }
+}
 
 public function is_validPostal($data){
+  echo $data['postal'];
   if(isset($data['postal'])){
       $postal = trim($data['postal']);
       $sql = "SELECT useraddress.PostalCode,useraddress.City,useraddress.State FROM user JOIN useraddress on user.UserId = useraddress.UserId  WHERE user.UserTypeId = 2 and useraddress.PostalCode = '$postal'";

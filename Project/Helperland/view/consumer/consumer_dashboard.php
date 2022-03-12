@@ -37,33 +37,38 @@ else{
                     <a href="<?= $base_url.'?controller=User&function=consumer_service_history'?>">Service History</a>
                     <!--<a href="#">Service Schedule</a>-->
                     <a href="<?= $base_url.'?controller=User&function=consumer_fav_pro'?>">Favourite Pros</a>
-                    <a href="<?= $base_url.'?controller=User&function=consumer_invoice'?>">Invoices</a>
+                    <!--<a href="<?= $base_url.'?controller=User&function=consumer_invoice'?>">Invoices</a>-->
                     <a href="<?= $base_url.'?controller=User&function=consumer_notification'?>">Notifications</a>
                   </div>
                   <div>
                       <div class="d-flex">
                       <h3 class="ps-4 d-inline">Dashboard</h3>
-                      <button class="book-btn d-inline ms-auto">Export</button>
+                      <button class="book-btn d-inline ms-auto">Book !</button>
                     </div>
                   <table class="d-block table table-bordered ps-4 table-responsive-lg w-auto">
-                        <th>Service Details<img class="ps-2" src="view/assets/images/sort.png"></th>
-                        <th>Service Provider<img class="ps-2" src="view/assets/images/sort.png"></th>
+                        <th>Service Id<img class="ps-2" src="view/assets/images/sort.png"></th>
+                        <th>Service Date<img class="ps-2" src="view/assets/images/sort.png"></th>
+                        <th>Helper<img class="ps-2" src="view/assets/images/sort.png"></th>
                         <th>Payment<img class="ps-2" src="view/assets/images/sort.png"></th>
-                        <th>Status<img class="ps-2" src="view/assets/images/sort.png"></th>
-                        <th>Rate SP</th>
+                        <th>options</th>
                       <tbody class="align-middle">
-                          <tr>
+                        <?php for($i=0;$i<5;$i++){
+                          echo '<tr>
                               <td>
-                                <div>
+                                12345
+                              </td>
+                              <td>
+                              <div>
                                     <img src="view/assets/images/calendar.png">
                                     <h6 class="d-inline">09/04/2018</h6>
                                   </div>
                                   <div>
                                     <h6 class="fw-normal">12:00 - 18:00</h6>
                                   </div>
+                                  
                               </td>
                               <td>
-                                  <span>
+                              <span>
                                   <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
                                 </span>
                                   <div class="mx-2">
@@ -74,334 +79,19 @@ else{
                                     <img src="view/assets/images/star2.png"/>
                                     <h6 class="d-inline fw-normal">4</h6>
                                   </div>
+                                  
                               </td>
                               <td>
-                                  <h4 class="fw-normal">&euro;63</h4>
+                              <h4 class="fw-normal">&euro;63</h4>
+                                 
                               </td>
                               <td>
-                                  <h6 class="bg-green text-white fw-normal">
-                                      Completed 
-                                  </h6>
+                                  <button class="rate-btn text-white">Change date or time</button>
+                                  <button class="bg-red border rounded text-white fw-normal">
+                                  Cancel 
+                              </button>
                               </td>
-                              <td>
-                                  <button class="rate-btn text-white">Rate SP</button>
-                              </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-green text-white fw-normal">
-                                    Completed 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-green text-white fw-normal">
-                                    Completed 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-red text-white fw-normal">
-                                    Canceled 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-green text-white fw-normal">
-                                    Completed 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-red text-white fw-normal">
-                                    Canceled 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-green text-white fw-normal">
-                                    Completed 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-green text-white fw-normal">
-                                    Completed 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-red text-white fw-normal">
-                                    Canceled 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div>
-                                  <img src="view/assets/images/calendar.png">
-                                  <h6 class="d-inline">09/04/2018</h6>
-                                </div>
-                                <div>
-                                  <h6 class="fw-normal">12:00 - 18:00</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <span>
-                                <img class="mx-2" src="view/assets/images/cap.png">Lyum Watson</img>
-                              </span>
-                                <div class="mx-2">
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star1.png"/>
-                                  <img src="view/assets/images/star2.png"/>
-                                  <h6 class="d-inline fw-normal">4</h6>
-                                </div>
-                            </td>
-                            <td>
-                                <h4 class="fw-normal">&euro;63</h4>
-                            </td>
-                            <td>
-                                <h6 class="bg-red text-white fw-normal">
-                                    Canceled 
-                                </h6>
-                            </td>
-                            <td>
-                                <button class="rate-btn text-white">Rate SP</button>
-                            </td>
-                        </tr>
+                          </tr>';}?>
                       </tbody>
                   </table>
                   <div class="d-flex">

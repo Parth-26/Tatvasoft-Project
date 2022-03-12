@@ -39,7 +39,7 @@ $(document).ready(function () {
       if(isPostalValid(zipcode)){
         var action = $('#setup-service-form').attr('action');
         $.ajax({
-          url : action,
+          url : "http://localhost/Tatvasoft-Project/Project/Helperland/?controller=Service&function=postal",//action,
           type : "POST",
           data : {postal : zipcode},
           success : function(result){
@@ -84,12 +84,16 @@ $(document).ready(function () {
     $('.Schedule-btn').click(function(){
       const postal = $('#na-postal').val();
       const userId = $('#userdata').val();
-      var pet = $('#pet-check:checked').val();
+     
+      var pet = $('#pet-check').val();
+     
       if(pet == undefined){
         pet = 0;
       }
+      
+       action = $('#details-form').attr('action');
       $.ajax({
-        url : $('#details-form'),//"http://localhost/Tatvasoft-Project/Project/Helperland/?controller=Service&function=get_Address_Favsp",
+        url : "http://localhost/Tatvasoft-Project/Project/Helperland/?controller=Service&function=get_Address_Favsp",
         type : 'POST',
         data : {zipcode : postal,userdata : userId,WorkWithPet : pet},
         success : function(result){
@@ -101,9 +105,9 @@ $(document).ready(function () {
           showFavSp(addressData.fav);
           $.LoadingOverlay("hide");
         }
+     
       });
     });
-   
     // date, time and hr
     $('#date').change(function(){
         var date = new Date($('#date').val());

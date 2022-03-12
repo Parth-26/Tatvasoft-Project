@@ -1,11 +1,15 @@
 <?php
    // session_start();
-   // if(isset($_SESSION['userdata'])){
-     //   $userdata = $_SESSION['userdata'];
-    //}
-    //else{
-       // header('location: '.$base_url.'?controller=User&function=home');
-       
+   if(isset($_SESSION['userdata'])){
+        $userdata = $_SESSION['userdata'];
+        // foreach ($userdata as $x=> $val) {
+        //     echo "$x = $val <br>";
+        // }
+    }
+    else{
+        echo "not found";
+       //header('location: '.$base_url.'?controller=User&function=home');
+    }
        include('controller/config.php');
     //}
 ?>
@@ -90,7 +94,7 @@
                                 Setup Service
                             </div>
                             <div class="service-setup-content">
-                                <form action="<?= $base_url.'?controller=User&function=booking'?>" id="setup-service-form" onsubmit="event.preventDefault();" method="POST">
+                                <form action="" id="setup-service-form" onsubmit="event.preventDefault();" method="GET">
                                     <span>Enter your Postal Code</span>
                                     <div class="postal-code">
                                         <div class="form-group mb-2">
@@ -241,7 +245,7 @@
                                         <div id="add-new-address">
                                             <div class="card card-body">
                                                 <input type="hidden" id="na-statename">
-                                                <input type="hidden" id="uemail" value="<?= $_SESSION['Email']?>">
+                                                <input type="hidden" id="uemail" value="<?php echo $userdata['Email'];?>">
                                                 <div class="row">
                                                     <div class="col-6">
                                                         <div class="form-group">

@@ -8,6 +8,7 @@ class SerivceController
         $this->model = new UserModel();
     }
     public function postal(){
+        echo $_POST['postal'];
         if(isset($_POST['postal'])){
             $result = $this->model->is_validPostal($_POST);
             if(count($result) > 0){

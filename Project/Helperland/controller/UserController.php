@@ -1,13 +1,14 @@
 <?php
-include 'controller/config.php';
+
 class UserController
 {
     function __construct()
     {
         include('models/helperlanddb.php');
+        $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
         $this->model = new UserModel();
     }
-
+    
     public function home()
     {
         include('view/home.php');
@@ -64,13 +65,81 @@ class UserController
     {
         include("view/consumer/consumer_notification.php");
     }
+    public function sp_upcoming()
+    {
+        include("view/service_provider/sp_upcoming.php");
+    }
+    public function sp_rating()
+    {
+        include("view/service_provider/sp_rating.php");
+    }public function sp_new_service()
+    {
+        include("view/service_provider/sp_new_service.php");
+    }
+    public function sp_service_history()
+    {
+        include("view/service_provider/sp_service_history.php");
+    }public function sp_block()
+    {
+        include("view/service_provider/sp_block.php");
+    }
+    public function sp_dashboard()
+    {
+        include("view/service_provider/sp_dashboard.php");
+    }
     public function my_acc()
     {
+        if($_SESSION['userdata']['UserTypeId']==1)
+        {
         include("view/consumer/my_acc.php");
+        }
+        elseif($_SESSION['userdata']['UserTypeId']==2)
+        {
+            include("view/service_provider/sp_dashboard.php");
+        }
+        else
+        {
+            echo 'Admin';
+        }
     }
     public function logout()
     {
         include("view/logout.php");
+    }
+    public function forgot()
+    {
+        include('view/forgotpasswd.php');
+    }
+    public function forgotpasswdmail()
+    {
+        $array=
+        [
+            'email'=>$_POST['email'],
+        ];
+        $result= $this->model->forgot_pass('user', $array);
+        $name=$result['FirstName'];
+        if($result){
+        $to = $_POST['email'];
+  $subject = "Reset Passord - Helperland";
+
+  $body = "
+  <div>
+  <h5 style='font-size:22px;'>Hi, $name !</h5>
+   <h6 style='font-size:18px;'>Click below link to reset your password... </h6>
+   <br/>
+   <a href='http://localhost/Tatvasoft-Project/Project/Helperland/?controller=User&function=forgot'> Reset password Link</a>
+ </div>
+    ";
+  //Set content-type header for sending HTML email
+  $headers[] = 'From: Parth Patel';
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-Type: text/html; utf-8';
+
+  // $headers = "MIME-Version: 1.0" . "\r\n";
+  // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+  mail($to, $subject, $body, implode("\r\n", $headers));
+        }
     }
     public function contact_data()
     {
@@ -89,6 +158,26 @@ class UserController
            if($last_id)
            {
                $msg="Your message has been sent successfully. Our team will be in touch with you shortly.";
+  $to = $array['email'];
+  $subject = "From Customer Support team";
+
+  $body = "
+  <div>
+  <h5 style='font-size:22px;'>Hi, $Name .I am from customer support team.</h5>
+   <h6 style='font-size:18px;'>Thank you for reaching out to us we wiil be in touch with you shortly. </h6>
+   <br/>
+   <a href='.$base_url.'?controller=User&function=forgot'> Reset password Link</a>
+ </div>
+    ";
+  //Set content-type header for sending HTML email
+  $headers[] = 'From: Parth Patel';
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-Type: text/html; utf-8';
+
+  // $headers = "MIME-Version: 1.0" . "\r\n";
+  // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+  mail($to, $subject, $body, implode("\r\n", $headers));
             header('Location: ' . $base_url.'?controller=User&function=contact&msg='.$msg);
            }
            else{
@@ -160,15 +249,29 @@ class UserController
                 'passwd' => $_POST['passwd'],
             ];
            $result = $this->model->login_user('user', $array);
-           $user=$result['UserID'];
+           $user=$result['UserId'];
            $pass=$result['Password'];
            if($_POST['passwd']===$pass)
            {
-            $_SESSION['userid']=$user;
-            $message=$_SESSION['userid'];
+            $_SESSION['userdata']=$result;
+           // $message=$_SESSION['userid'];
             $_SESSION['name']=$result['FirstName'].' '.$result['LastName'];
             $_SESSION['loggedin']=1;
+            if($result['UserTypeId']=='1')
+            {
             header('Location: ' . $base_url.'?controller=User&function=consumer_service_history');
+            }
+            else if($result['UserTypeId']=='2')
+            {
+                header('Location: ' . $base_url.'?controller=User&function=sp_upcoming');
+            }
+            else if($result['UserTyprId']=='3')
+            {
+
+            }
+            else{
+                echo 'not found user type';
+            }
            }
            else
            {

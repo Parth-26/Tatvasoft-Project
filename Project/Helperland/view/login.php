@@ -51,14 +51,14 @@ $base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form method="post" action="" class="ng-untouched ng-pristine ng-invalid">
+      <form method="post" action="<?= $base_url.'?controller=User&function=forgotpasswdmail'?>" class="ng-untouched ng-pristine ng-invalid">
           <div>
             <div class="py-1">
-              <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Email" maxlength="100" name="Email" type="Email" placeholder="Email address" required>
+              <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="email" maxlength="100" name="email" type="Email" placeholder="Email address" required>
             </div>
           </div>
         <div class="col-sm-12 text-center pt-4">
-          <button class="btn btn-primary btn-lg" data-dismiss="msg" type="submit">Log in</button>
+          <button class="btn btn-primary btn-lg" data-dismiss="msg" type="submit">Submit</button>
         </div>
       </form>
       <div class="text-center pt-4">
