@@ -106,6 +106,7 @@ public function is_validPostal($data){
   echo $data['postal'];
   if(isset($data['postal'])){
       $postal = trim($data['postal']);
+      echo "<script>alert('$postal')</script>";
       $sql = "SELECT useraddress.PostalCode,useraddress.City,useraddress.State FROM user JOIN useraddress on user.UserId = useraddress.UserId  WHERE user.UserTypeId = 2 and useraddress.PostalCode = '$postal'";
 
       $result = $this->conn->query($sql);

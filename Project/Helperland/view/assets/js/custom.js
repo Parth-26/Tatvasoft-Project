@@ -39,19 +39,21 @@ $(document).ready(function () {
       if(isPostalValid(zipcode)){
         var action = $('#setup-service-form').attr('action');
         $.ajax({
-          url : "http://localhost/Tatvasoft-Project/Project/Helperland/?controller=Service&function=postal",//action,
+          url : action,
           type : "POST",
           data : {postal : zipcode},
           success : function(result){
             if(result){
+              const postaldata = JSON.parse(result);
+              alert(postaldata['PostalCode']);
+              $('#na-postal').val(postaldata['PostalCode']);
+              $('#na-statename').val(postaldata['State']);
+              $('#na-city option').text(postaldata['City']).val(postaldata['City']);
               changeNavtab('service-setup-tab','schedule-tab','service-setup','schedule');
               activateNavtabs();
               changeNavtabImg();
               changeValue();
-              const postaldata = JSON.parse(result);
-              $('#na-postal').val(postaldata['PostalCode']);
-              $('#na-statename').val(postaldata['State']);
-              $('#na-city option').text(postaldata['City']).val(postaldata['City']);
+
               $.LoadingOverlay("hide");
             }else{
               var alertMsg = "<div class='alert alert-danger alert-dismissible fade show' role='alert'>Sorry we are not providing service in your area<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>"

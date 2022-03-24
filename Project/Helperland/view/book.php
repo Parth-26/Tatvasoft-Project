@@ -94,7 +94,7 @@
                                 Setup Service
                             </div>
                             <div class="service-setup-content">
-                                <form action="" id="setup-service-form" onsubmit="event.preventDefault();" method="GET">
+                                <form action="<?= $base_url.'?controller=Service&function=postal'?>" id="setup-service-form" onsubmit="event.preventDefault();" method="GET">
                                     <span>Enter your Postal Code</span>
                                     <div class="postal-code">
                                         <div class="form-group mb-2">

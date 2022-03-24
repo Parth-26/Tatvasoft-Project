@@ -87,6 +87,14 @@ class UserController
     {
         include("view/service_provider/sp_dashboard.php");
     }
+    public function service_request()
+    {
+        include("view/admin/service_request.php");
+    }
+    public function user_management()
+    {
+        include("view/admin/user_management.php");
+    }
     public function my_acc()
     {
         if($_SESSION['userdata']['UserTypeId']==1)
@@ -265,8 +273,9 @@ class UserController
             {
                 header('Location: ' . $base_url.'?controller=User&function=sp_upcoming');
             }
-            else if($result['UserTyprId']=='3')
+            else if($result['UserTypeId']=='3')
             {
+                header('Location: ' . $base_url.'?controller=User&function=service_request');
 
             }
             else{
