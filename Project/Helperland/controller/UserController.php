@@ -87,13 +87,9 @@ class UserController
     {
         include("view/service_provider/sp_dashboard.php");
     }
-    public function service_request()
+    public function admin_dashboard()
     {
-        include("view/admin/service_request.php");
-    }
-    public function user_management()
-    {
-        include("view/admin/user_management.php");
+        include("view/admin/admin_dashboard.php");
     }
     public function my_acc()
     {
@@ -275,7 +271,7 @@ class UserController
             }
             else if($result['UserTypeId']=='3')
             {
-                header('Location: ' . $base_url.'?controller=User&function=service_request');
+                header('Location: ' . $base_url.'?controller=User&function=admin_dashboard');
 
             }
             else{
@@ -291,10 +287,19 @@ class UserController
             echo 'Error Occured Try Again';
         }
     }
+    public function delete_user()
+    {
+        echo "delete user";
+    }
     public function booking()
     {
         $postal=$_POST['postal'];
         echo $postal;
+    }
+    public function get_user()
+    {
+        $result = $this->model->get_userdata('user');
+        echo $result;
     }
 }
 ?>

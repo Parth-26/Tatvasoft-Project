@@ -34,12 +34,33 @@
                         <img class="px-1" src="view/assets/images/sp-arrow-down.png">
   </button>
   <ul class="dropdown-menu dropdown-menu-lg-end">
-      <li class="text-center"><p class="dropdoen-item">
+      <li class="text-center"><p class="dropdown-item">
           <p>Welcome</p><?php echo $_SESSION['name'] ?>
 </p></li>
-    <li><a href="<?= $base_url.'?controller=User&function=consumer_dashboard'?>" class="dropdown-item" type="button">Dashboard</a></li>
-    <li><a href="<?= $base_url.'?controller=User&function=my_acc'?>" class="dropdown-item" type="button">My Settings</a></li>
-    <li><a href="<?= $base_url.'?controller=User&function=logout'?>" class="dropdown-item" type="button">Logout</a></li>
+  <?php
+  $logout="$base_url.'?controller=User&function=logout";
+  if($_SESSION['userdata']['UserTypeId']==1){
+    $dashboard_path="$base_url.'?controller=User&function=consumer_dashboard";
+    $acc_path="<?= $base_url.'?controller=User&function=my_acc";
+    echo '<li><a href='.$dashboard_path.' class="dropdown-item" type="button">Dashboard</a></li>
+    <li><a href='.$acc_path.' class="dropdown-item" type="button">My Settings</a></li>
+    <li><a href='.$logout.' class="dropdown-item" type="button">Logout</a></li>';
+  }
+    elseif($_SESSION['userdata']['UserTypeId']==2)
+    {
+      $dashboard_path="$base_url.'?controller=User&function=sp_dashboard";
+    $acc_path="$base_url.'?controller=User&function=my_acc";
+    echo '<li><a href='.$dashboard_path.' class="dropdown-item" type="button">Dashboard</a></li>
+    <li><a href='.$acc_path.' class="dropdown-item" type="button">My Settings</a></li>
+    <li><a href='.$logout.' class="dropdown-item" type="button">Logout</a></li>';
+    }
+    elseif($_SESSION['userdata']['UserTypeId']==3)
+    {
+      $dashboard_path="$base_url.?controller=User&function=admin_dashboard";
+    echo '<li><a href='.$dashboard_path.' class="dropdown-item" type="button">Dashboard</a></li>
+    <li><a href='.$logout.' class="dropdown-item" type="button">Logout</a></li>';
+    }
+    ?>
   </ul>
 </div>
                         </li>

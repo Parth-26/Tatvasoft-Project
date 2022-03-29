@@ -106,7 +106,7 @@ public function is_validPostal($data){
   echo $data['postal'];
   if(isset($data['postal'])){
       $postal = trim($data['postal']);
-      echo "<script>alert('$postal')</script>";
+      //echo "<script>alert('$postal')</script>";
       $sql = "SELECT useraddress.PostalCode,useraddress.City,useraddress.State FROM user JOIN useraddress on user.UserId = useraddress.UserId  WHERE user.UserTypeId = 2 and useraddress.PostalCode = '$postal'";
 
       $result = $this->conn->query($sql);
@@ -279,6 +279,17 @@ public function getServiceRequestById($serviceid){
   }
   return $result;
 }
+
+public function get_userdata($table)
+{
+  $sql = "SELECT * FROM user";
+  $users = $this->conn->query($sql);
+  if($users->num_rows > 0){
+      $result = $service->fetch_assoc();
+  }else{
+      $result = [];
+  }
+  return $result;
+}
 }
 ?>
-}

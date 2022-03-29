@@ -64,13 +64,14 @@ color: #FFFFFF;
   }
   .circle-btn
   {
+    height:38px;
+    width: 38px;
       padding-left: 5%;
       padding-top: 2%;
     border: 1px solid #7e7a7a;
     display: inline-block;
-    border-radius: 5%;
-    height:38px;
-    width: 38px;
+    border-radius: 100%;
+    
   }
   .rotate-img
   {

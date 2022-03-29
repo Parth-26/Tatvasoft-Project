@@ -94,14 +94,14 @@
                                 Setup Service
                             </div>
                             <div class="service-setup-content">
-                                <form action="<?= $base_url.'?controller=Service&function=postal'?>" id="setup-service-form" onsubmit="event.preventDefault();" method="GET">
+                                <form action="#" id="setup-service-form" onsubmit="event.preventDefault();">
                                     <span>Enter your Postal Code</span>
                                     <div class="postal-code">
                                         <div class="form-group mb-2">
                                             <input type="text" id="postal" class="form-control" placeholder="Postal code">
                                         </div>
                                         <div class="mx-2">
-                                            <button type="submit" class="btn form-control postal-check" >Check Availability</button>
+                                            <button type="submit" class="btn form-control postal-check">Check Availability</button>
                                         </div>
                                     </div>
                                 </form>
