@@ -1,114 +1,190 @@
-<!Doctype HTML>
-<html>
-    <head>
-        <title>
-            FAQs | Helperland
-        </title>
-        <link type="text/css" rel="stylesheet" href="book.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        <script src="book.js"></script>
-    </head>
-    <body>
-        
-        <!--Navbar-->
-        <header>
-        <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img class="ps-3" src="assets/logo-small.png"/></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <button class="book-btn px-4" value="Book a Cleaner">Book now</button>
-                    </li>
-                    <li class="nav-item ps-2">
-                        <button class="book-btn px-4" value="Prices & Serices">Prices & Serices</button>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Warranty</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                        <button class="book-btn px-4" value="Book a Cleaner">Login</button>
-                    </li>
-                    <li class="nav-item ps-2">
-                        <button class="book-btn px-4" value="Book a Cleaner">Become a helper</button>
-                    </li>
-                </ul>
-              </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/book.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/header2.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/4ae0bb5b6f.js" crossorigin="anonymous"></script>
+
+    <title>Book Service</title>
+</head>
+
+<body>
+    <!-- modal start -->
+
+    <!--login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title ">
+                        <h4>Login to your account</h4>
+                    </div>
+                    <button type="button" class="btn-close text-end" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form>
+                            <div class="col my-2">
+                                <div class="form-group icon">
+                                    <input class="form-control" name="email" placeholder="Email" type="email"
+                                        required /><i class=""></i>
+                                    <img alt="email" src="./assets/images/user.png">
+                                </div>
+                            </div>
+                            <div class="col my-2">
+                                <div class="form-group icon">
+                                    <input class="form-control" name="psw" placeholder="Password" type="text" required
+                                        autofocus />
+                                    <img alt="Password" src="./assets/images/lock.png">
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me
+                                </label>
+                            </div>
+                            <div class="">
+                                <button type="button" class="btn btn-block btn-round my-3 col-12">Login</button>
+                            </div>
+                            <div class="text-center col">
+                                <p><a href="" data-bs-toggle="modal" data-bs-target="#forgotModal"
+                                        data-bs-dismiss="modal">Forgot
+                                        password? </a></p>
+                                <p>Don't have an account? <a href="./customer_acc.html"> Create an account</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </nav>
-        </header>
-        <!--about content-->
-        <section>
-        <div class="container-xl">
-            <div class="text-center">
-            <h2 class="pt-4">Book your cleaning service</h2>
-            <span>
-                <img class="pe-2" src="assets/rectangle-5.png"/>
-                <img src="assets/forma-1-copy-5.png"/>
-                <img class="ps-2" src="assets/rectangle-5.png"/>
-            </span>
-        </section>
-        <section class="container pt-5">
-            <div class="row book-service">
-                <div class="col-lg-8 service-tab">
-                    <!--<ul class="nav nav-tabs nav-justified">
-                        <li class="nav-item">
-                          <a class="nav-link active-tab" id="step-1" href="#" onclick=makeactive(this) data-bs-toggle="tab" data-bs-target="#step-1-con" type="button" role="tab" aria-controls="step-1-con" aria-selected="true">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="step-2" href="#" onclick=makeactive(this) data-bs-toggle="tab" data-bs-target="#step-2-con" type="button" role="tab" aria-controls="step-2-con" aria-selected="false">Active 2</a>
-                          </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="step-3" href="#" onclick=makeactive(this)>Link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="step-4" href="#" onclick=makeactive(this)>Disabled</a>
-                        </li>
-                      </ul>
-                      <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="step-1" id="step-1-con"><h2>step 1</h2></div>
-                      <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="step-2" id="step-2-con"><h2>step 2</h2></div>
-                      <div class="hide" id="step-2-con"><h2>step 2</h2></div>
-                      <div class="hide" id="step-3-con"><h2>step 3</h2></div>
-                      <div class="hide" id="step-4-con"><h2>step 4</h2></div>-->
-                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        </div>
+    </div>
+    <!-- forgot modal -->
+    <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <div class="form-title">
+                        <h4>Forgot password</h4>
+                    </div>
+                    <button type="button" class="btn-close text-end" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form>
+                            <div class="col my-2">
+                                <div class="form-group icon">
+                                    <input class="form-control" name="email" placeholder="Email" type="email"
+                                        required /><i class=""></i>
+                                    <img alt="email" src="./assets/images/user.png">
+                                </div>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-block btn-round col-12 my-3">Send</button>
+                            </div>
+                            <div class="text-center col">
+                                <p><a href="" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                        data-bs-dismiss="modal">Login now</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    <header id="header">
+        <div class="header">
+            <div class="brand">
+                <a class="navbarbrand" href="homepage.html">
+                    <img src="./assets/images/nav-logo.png" alt="">
+                </a>
+            </div>
+            <ul>
+                <li class="navitem">
+                    <a class="navlink navbtn" href="book.html">Book now</a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink" href="price.html">Prices & services</a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink" href="#">Warranty</a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink" href="#">Blog</a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink" href="contact.html">Contact</a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink navbtn" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
+                        data-bs-dismiss="modal">Login</a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink navbtn" href="service_provider.html">Become a
+                        Helper</a>
+                </li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars "></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-img"></section>
+
+        <section class="book-service-section">
+            <div class="text-center title">
+                Set up your cleaning service
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="line"></div>
+                <img src="./assets/images/separator.png" alt="">
+                <div class="line"></div>
+            </div>
+            <div class="book-service">
+                <div class="service-tab">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active fill" id="service-setup-tab" data-bs-toggle="tab"
                                 data-bs-target="#service-setup" type="button" role="tab" aria-controls="service-setup"
                                 aria-selected="true">
-                                <img src="assets/setup-service.png" alt="">
+                                <img src="./assets/images/setup-service.png" alt="">
                                 <span>Setup Service</span>
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="schedule-tab" data-bs-toggle="tab" data-bs-target="#schedule"
                                 type="button" role="tab" aria-controls="schedule" aria-selected="false">
-                                <img src="assets/schedule.png" alt="">
+                                <img src="./assets/images/schedule.png" alt="">
                                 <span>Schedule & Plan</span>
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details"
                                 type="button" role="tab" aria-controls="details" aria-selected="false">
-                                <img src="assets/details.png" alt="">
+                                <img src="./assets/images/details.png" alt="">
                                 <span>Your Details</span>
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment"
                                 type="button" role="tab" aria-controls="payment" aria-selected="false">
-                                <img src="assets/payment.png" alt="">
+                                <img src="./assets/images/payment.png" alt="">
                                 <span>Make Payment</span>
                             </button>
                         </li>
@@ -140,6 +216,25 @@
                             </div>
                             <div class="service-schedule">
                                 <form action="">
+                                    <span class="mb-0 mt-3">Select number of rooms and bath</span>
+                                    <div class="room-and-bath bb">
+                                        <div class="">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected value="1">1 bed</option>
+                                                <option value="2">2 bed</option>
+                                                <option value="3">3 bed</option>
+                                                <option value="4">4 bed</option>
+                                            </select>
+                                        </div>
+                                        <div class="mx-3">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected value="1">1 bath</option>
+                                                <option value="2">2 bath</option>
+                                                <option value="3">3 bath</option>
+                                                <option value="4">4 bath</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="service-time d-flex align-items-center flex-wrap bb">
                                         <div class="d-flex align-items-end flex-wrap">
                                             <div class="form-group">
@@ -171,35 +266,35 @@
                                             <label>
                                                 <input class="form-check-input" type="checkbox" value="3">
                                                 <div class="service">
-                                                    <img src="assets/3.png" alt="">
+                                                    <img src="assets/images/3.png" alt="">
                                                 </div>
                                                 <span class="service-name">Inside cabinets</span>
                                             </label>
                                             <label>
                                                 <input class="form-check-input" type="checkbox" value="5">
                                                 <div class="service">
-                                                    <img src="assets/5.png" alt="">
+                                                    <img src="assets/images/5.png" alt="">
                                                 </div>
                                                 <span class="service-name">Inside fridge</span>
                                             </label>
                                             <label>
                                                 <input class="form-check-input" type="checkbox" value="4">
                                                 <div class="service">
-                                                    <img src="assets/4.png" alt="">
+                                                    <img src="assets/images/4.png" alt="">
                                                 </div>
                                                 <span class="service-name">Inside oven</span>
                                             </label>
                                             <label>
                                                 <input class="form-check-input" type="checkbox" value="2">
                                                 <div class="service">
-                                                    <img src="assets/2.png" alt="">
+                                                    <img src="assets/images/2.png" alt="">
                                                 </div>
                                                 <span class="service-name">Laundry wash & dry</span>
                                             </label>
                                             <label>
                                                 <input class="form-check-input" type="checkbox" value="1">
                                                 <div class="service">
-                                                    <img src="assets/1.png" alt="">
+                                                    <img src="assets/images/1.png" alt="">
                                                 </div>
                                                 <span class="service-name">Interior windows</span>
                                             </label>
@@ -314,7 +409,7 @@
                                                     <label>
                                                         <input class="form-check-input" type="checkbox" value="3">
                                                         <div class="sp-avtar mb-1">
-                                                            <img src="assets/cap.png" alt="">
+                                                            <img src="assets/images/cap.png" alt="">
                                                         </div>
                                                         <span class="sp-name">Sandip Patel</span>
                                                         <button type="button" class="btn select">Select</button>
@@ -378,143 +473,139 @@
                                     </div>
                                 </form>
                             </div>
-                </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="shadow pb-3">
-                    <div class="border bg-blue border-1 text-center">
-                        <label class="text-white p-3">Payment summary</label>
-                    </div>
-                    <div class="ms-2">
-                        <span>16/2/2022</span><span class="ps-2">11:00</span>
-                    </div>
-                    <div class="ms-2">
-                        <label class="fw-bold">length of time</label>
-                        <div class="d-flex justify-content-between px-2">
-                            <div class="d-inline">Basic</div>
-                            <div class="d-inline">0 hrs</div>
-                        </div>
-                        <div class="mx-2 hori-line pt-2 pb-2"></div>
-                        <div class="fw-bold d-flex justify-content-between px-2 py-1">
-                            <p class="d-inline">Total service time</p>
-                            <p class="d-inline start-100">3 hrs</p>
                         </div>
                     </div>
-                    <div class="hori-line"></div>
-                    <div class="fw-bold ms-2 d-flex justify-content-between px-2 py-4">
-                        <label>Per Cleaning</label>
-                        <label>&euro; 0.00</label>
-                    </div>
-                    <div class="hori-line"></div>
-                    <div style="color: #1D7A8C;" class="ms-2 d-flex justify-content-between px-2 align-items-center">
-                        <label>Total Price</label>
-                        <label class="fs-1 fw-bold">&euro; 0.00</label>
-                    </div>
-                    <p class="ms-2">According to § 19 UStG no sales tax will be charged.</p>
-                    <div class="ms-2 d-flex justify-content-between px-2">
-                        <label>Effective Price</label>
-                        <label>&euro; 0.00</label>
-                    </div>
-                    <p class="ms-2">
-                        <span style="color:red;">*</span>Save 20% according to § 35a Income Tax Act (EStG).
-                    </p>
-                    <div class="ms-2 d-flex align-items-strech" style="background-color:#f3f3f3 ;">
-                        <label>&#128522 Take a look at our included basic services</label>
-                    </div>
                 </div>
-                <!--que-->
-                <div class="py-5">
-                    <h3 class="text-center">
-                        Questions ?
-                    </h3>
-                    <div id="que1">
-                        <a data-bs-toggle="collapse" href="#q1" role="button" aria-expanded="false" aria-controls="q1">
-                          What is included in basic cleaning ?
-                        </a>
-                      <div class="collapse" id="q1">
-                        <div>
-                            Living room, bedroom and bathroom, kitchen and common areas.
+                <div class="payment-tab">
+                    <div class="payment-card">
+                        <div class="payment-Summary">
+                            <div>Payment Summary</div>
                         </div>
-                      </div>
+
+                        <div class="book-time">
+                            <div>01/01/2018 @ 4:00 pm</div>
+                            <div>1 bed, 1 bath.</div>
+                        </div>
+
+                        <div class="duration bb">
+                            <span>Duration</span>
+                            <div>
+                                <div class="basic-service-time">
+                                    <div>Basic</div>
+                                    <div>0 Hrs</div>
+                                </div>
+                                <div class="total-time">
+                                    <div><b>Total Service Time</b></div>
+                                    <div><b>3 Hrs</b></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="per-cleaning">
+                            <div class="">
+                                <div>Per cleaning</div>
+                                <div><b>0,00 €</b></div>
+                            </div>
+                            <div class="discount">
+                                <div>Discount</div>
+                                <div><b>0,00 €</b></div>
+                            </div>
+                        </div>
+
+                        <div class="total-payment">
+                            <div class="price">
+                                <div>Total Payment</div>
+                                <div><b>0,00 €</b></div>
+                            </div>
+                            <div class="effective-price mt-2">
+                                <div>Effective Price</div>
+                                <div><b>0,00 €</b></div>
+                            </div>
+                            <div class="save mt-2"><a href=""><span>*</span>You will save 20% according to §35a
+                                    EStG.</a></div>
+                        </div>
+
+                        <div class="smily">
+                            <img src="./assets/images/smiley.png" alt=""> See what is always included
+                        </div>
                     </div>
-                    <div id="que2">
-                      <a data-bs-toggle="collapse" href="#q2" role="button" aria-expanded="false" aria-controls="q3">
-                        Can I skip or move bookings ?
-                      </a>
-                    <div class="collapse" id="q2">
-                      <div>
-                        You can change a booking free of charge 48 hours before an assignment. If you want to skip an already booked assignment, we will credit the value of the booking to your account. You can use the credit for a future booking.
-                      </div>
+                    <div class="faq">
+                        <div class="text-center">Questions?</div>
+                        <div class="accordion" id="accordion">
+                            <div class="card1" id="heading-One">
+                                <p data-toggle="collapse" data-target="#collapse-One" class="qe">
+                                    <img class="img" src="./assets/images/drop-arrow.png" alt="">
+                                    What's included in a cleaning?
+                                </p>
+                            </div>
+                            <div id="collapse-One" class="collapse show" aria-labelledby="heading-One"
+                                data-parent="#accordion">
+                                <p class="ans">Bedroom, Living Room & Common Areas, Bathrooms, Kitchen, Extras</p>
+                            </div>
+
+                            <div class="card1" id="heading-Two">
+                                <p class="collapsed qe" data-toggle="collapse" data-target="#collapse-Two" class="qe">
+                                    <img class="img" src="./assets/images/drop-arrow.png" alt="">
+                                    Can I skip or reschedule bookings?
+                                </p>
+                            </div>
+                            <div id="collapse-Two" class="collapse" aria-labelledby="heading-Two"
+                                data-parent="#accordion">
+                                <p class="ans">You can reschedule any booking for free at least 24 hours in advance of
+                                    the scheduled start time. If you need to skip a booking within the minimum
+                                    commitment, we’ll credit the value of the booking to your account. You can use this
+                                    credit on future cleanings and other Helperland services. </p>
+                            </div>
+                        </div>
+                        <div class="link"><a href="faqs.html">For more help</a></div>
                     </div>
                 </div>
-                <div id="que3">
-                    <a data-bs-toggle="collapse" href="#q3" role="button" aria-expanded="false" aria-controls="q1">
-                        Do I have to be at home during cleaning ?
-                      </a>
-                    <div class="collapse" id="q3">
-                      <div>
-                        We recommend that you be at home for the first cleaning. This way you get to know your helper personally. You can also show him the rooms and respond to your wishes. Of course you can arrange an appointment or place for the key handover with your helper. With frequent bookings, some customers choose to leave a spare key to their cleaner.
-                      </div>
-                    </div>
-                </div>
-                <a href="faqs.html"> More quesions and answers</a>
-                </div>
-            </div>
             </div>
         </section>
-                    <!--newsletter-->
-            <section>
-                <div class="d-flex justify-content-center pt-4 pb-4">
-                    <div>
-                        <h3>GET OUR NEWSLETTER</h3>
-                        <div>
-                                <input class="letter-style d-inline" type="text" placeholder="YOUR EMAIL"/>
-                                <button class="submit-btn d-inline" type="Submit">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-                <!--newsletter over-->
-            <!--Footer-->
-            <footer class="bg-dark fixed">
-                <nav class="navbar navbar-expanded-lg">
-                    <span>
-                        <img class="ps-3" src="assets/logo-small.png"/>
-                        </span>
-                        <span>
-                        <ul class="nav px-4">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">TESTIMONIALS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">FAQS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">INSURANCE POLICY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">IMPRESSUM</a>
-                        </li>
-                        </ul>
-                    </span>
-                    <span>
-                        <img src="assets/ic-facebook.png"/>
-                        <img class="ps-3 pe-5" src="assets/ic-instagram.png"/>
-                    </span>
-                </nav>
-                <div class="hori-line container pb-1"></div>
-                <div class="container text-center pt-2">
-                    <span class="text-white">@2018 Helperland All rights reserved</span>
-                    <span>&nbsp <a class="text-white" href="#">Terms and Conditions</a> <span class="sep px-1"></span> <a class="text-white" href="#">Privacy Policy</a></span>
-                </div>
-              </footer>
+        <section class="section-newsseltter">
+            <div class="newstitle">
+                <p>get our newsselter</p>
+            </div>
+            <div class="newsform d-flex justify-content-center flex-wrap">
+                <div class="input-field mb-2"><input type="text" placeholder="Your Email"></div>
+                <button>Submit</button>
+            </div>
+        </section>
+
+    </main>
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer-img">
+                <img src="./assets/images/white-logo-transparent-background.png" class="footer1-logo ">
+            </div>
+            <div class="footer-nav">
+                <ul class="">
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#Customers-Say">TESTIMONIALS</a></li>
+                    <li><a href="faqs.html">FAQS</a></li>
+                    <li><a href="#">INSURANCE POLICY</a></li>
+                    <li><a href="#">IMPRESSUM</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <img src="./assets/images/facebook.png" alt="">
+                <img src="./assets/images/insta.png" alt="">
+            </div>
         </div>
-    </body>
+        <hr class="hr1">
+        <div class="sub-footer">
+            <p>©2018 Helperland. All rights reserved. Terms and Conditions | <span class="text-primary">Privacy
+                    Policy</span></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/book-now.js"></script>
+</body>
+
 </html>
