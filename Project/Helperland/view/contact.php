@@ -1,171 +1,163 @@
 <?php
-
-$base_url='http://localhost/Tatvasoft-Project/Project/Helperland/';
-$message="";
-if(isset($_GET['msg'])){
-  $message = $_GET['msg'];
+if (isset($_SESSION['userdata'])) {
+    $userdata = $_SESSION['userdata'];
 }
-
 ?>
-<!Doctype HTML>
-<html>
-    <head>
-        <title>
-            Contact Us | Helperland
-        </title>
-        <link type="text/css" rel="stylesheet" href="view/assets/css/contact.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <!--Navbar-->
-        <?php 
-  if($_SESSION['loggedin'] == 1)
-  {
-    include('view/header2.php'); 
-  }
-  else{
-  include('view/header.php'); 
-}
-include('view/login.php');
-  ?>
-        <main>
-              <setion>
-                  <img class="img-fluid" src="view/assets/images/group-16_2.png" alt="Worker Image">
-              </section>
-            <div class="container">
-            <!--contact us-->
-            <section>
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="pt-4">Contact Us</h2>
-                    <span>
-                        <img class="pe-2" src="view/assets/images/rectangle-5.png"/>
-                        <img src="view/assets/images/forma-1-copy-5.png"/>
-                        <img class="ps-2" src="view/assets/images/rectangle-5.png"/>
-                    </span>
-                </div>
-                <section>
-                <div class="row justify-content-center pt-3">
-                    <div class="col-lg-4 text-center">
-                        <img class="img-fluid" src="view/assets/images/forma-1_2.png"/>
-                        <div class="pt-3">
-                        <p>1111 Lorem ipsum text 100, </p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/4ae0bb5b6f.js" crossorigin="anonymous"></script>
+
+    <title>Contact</title>
+</head>
+
+<body>
+    <?php
+    include('modal/login-model.php');
+    include('includes/header.php');
+    ?>
+
+    <main>
+        <input type="hidden" id="contact-success" value="<?php if(isset($_GET['parameter'])){ echo $_GET['parameter'];}?>">
+        <section class="hero-img"></section>
+
+        <section class="contact">
+            <div class="text-center">
+                <span class="title">Contact us</span>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="line"></div>
+                <img src="assets/images/separator.png" alt="">
+                <div class="line"></div>
+            </div>
+            <div class="detail-section d-flex flex-wrap justify-content-center">
+                <div class="detail text-center">
+                    <div class="img"><img src="assets/images/location.png" alt=""></div>
+                    <div class="content">
+                        <p>1111 Lorem ipsum text 100,</p>
                         <p>Lorem ipsum AB</p>
                     </div>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <img class="img-fluid" src="./view/assets/images/phone-call.png"/>
-                        <div class="pt-3">
+                </div>
+                <div class="detail text-center">
+                    <div class="img"><img src="assets/images/phone-call.png" alt=""></div>
+                    <div class="content">
                         <p>+49 (40) 123 56 7890</p>
                         <p>+49 (40) 987 56 0000</p>
+                    </div>
+                </div>
+                <div class="detail text-center">
+                    <div class="img"><img src="assets/images/mail.png" alt=""></div>
+                    <div class="content">
+                        <p>info@helperland.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="get-in">
+                <div class="text-center">
+                    <span class="title">Get in touch with us</span>
+                </div>
+                <div class="form">
+                    <div class="success-msg"></div>
+                    <form action="<?= Config::BASE_URL . '?controller=Public&function=contact_us' ?>" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 pb-3">
+                                <input class="form-control" id="firstname" name="firstname" placeholder="First name" type="text" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 pb-3">
+                                <input class="form-control" id="lastname" name="lastname" placeholder="Last name" type="text" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <img class="img-fluid" src="view/assets/images/vector-smart-object.png"/>
-                        <p class="pt-3">info@helperland.com</p>
-                    </div>
-                </div>
-                </section>
-            </div>
-        </section>
-            <!--contact us over-->
-            <div class="hori-line container pt-4"></div>
-            <!--get in touch-->
-        <section class="jumbo-section inner-page-section contact-us-form pt-4">
-            <div class="container">
-              <h2 class="text-center">Get in touch with us</h2>
-              <div class="text-center">
-                <h6><?= $message ?></h6>
-              </div>
-              <!---->
-              <form method="post" action="<?= $base_url.'?controller=User&function=contact_data'?>" class="ng-untouched ng-pristine ng-invalid">
-        
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="FirstName" maxlength="25" name="fname" type="text" placeholder="First name" required>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="LastName" maxlength="25" name="lname" type="text" placeholder="Last name" required>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-text">+49</span>
-                        <input class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="PhoneNumber" maxlength="10" name="PhoneNumber" type="text" placeholder="Mobile number" required>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Email" maxlength="100" name="email" type="Email" placeholder="Email address" required>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="form-group">
-                      <select class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="SubjectTypeId" name="sub_type">
-                        <option value="1">
-                          General</option>
-                          <option value="2">
-                          Inquiry</option>
-                          <option value="3">
-                          Renewal</option>
-                          <option value="4">
-                          Revocation</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="form-group">
-                      <textarea class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Message" maxlength="1000" rows="5" placeholder="Message" name="message" required></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 text-center pt-4">
-                  <button class="btn btn-primary btn-lg" data-dismiss="msg" type="submit">Submit</button>
-                </div>
-              </form>
-            </div>
-          </section>
-            </div>
-            <!--get in touch over-->
-            <!--Map-->
-            <section class="pt-5">
-                <img class="img-fluid" src="view/assets/images/group-16.png"/>
-            </section>
-            <!--Map over-->
-            <!--newsletter-->
-            <section>
-            <div class="d-flex justify-content-center pt-4 pb-4">
-                <div>
-                    <h3>GET OUR NEWSLETTER</h3>
-                    <div>
-                            <input class="letter-style d-inline" type="text" placeholder="YOUR EMAIL"/>
-                            <button class="submit-btn d-inline" type="Submit">Submit</button>
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 pb-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">+49</div>
+                                    </div>
+                                    <input type="number" class="form-control phone" id="inlineFormInputGroup" placeholder="Mobile number" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 pb-3">
+                                <input class="form-control" name="email" id="email" placeholder="Email address" type="email" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 pb-3">
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control" name="subject">
+                                        <option selected>Subject</option>
+                                        <option value="General">General</option>
+                                        <option value="Inquiry">Inquiry</option>
+                                        <option value="Renewal">Renewal</option>
+                                        <option value="Revocation">Revocation</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 pb-3">
+                                <textarea style="resize:vertical;" id="msg" class="form-control msg" placeholder="Message" rows="6" name="msg"></textarea>
+                            </div>
+                        </div>
+                        <!--<div class="row file">
+                            <div class="col-lg-12 col-md-12 col-sm-12 pb-3">
+                                <input class="form-control" type="file" name="attachment">
+                            </div>
+                        </div>-->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="contact-check">
+                            <label class="form-check-label" for="contact-check">
+                                Our current ones apply <a href="#">privacy policy</a>. I hereby agree that my data entered into the contact form will be stored electronically and processed and used for the purpose of establishing contact. The consent can be withdrawn at any time pursuant to Art. 7 (3) GDPR by informal notification (eg by e-mail).
+                            </label>
+                        </div>
+                        <div class="submit text-center">
+                            <button type="submit" name="submit" id="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
-            <!--newsletter over-->
-        </main>
- <!--Footer-->
- <footer class="bg-dark">
- <?php
-               include('footer.php');
-               ?>
-  </footer>
+
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.6979157244446!2d72.49824711495718!3d23.034861321648993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8352e403437b%3A0xdc9d4dae36889fb9!2sTatvaSoft!5e0!3m2!1sen!2sin!4v1638425689672!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section class="section-newsseltter">
+            <div class="newstitle">
+                <p>get our newsselter</p>
+            </div>
+            <div class="newsform d-flex justify-content-center flex-wrap">
+                <div class="input-field mb-2"><input type="text" placeholder="Your Email"></div>
+                <button>Submit</button>
+            </div>
+        </section>
+
+    </main>
+    <?php
+    include('includes/footer.php');
+    ?>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/public.js"></script>
 </body>
+
 </html>
