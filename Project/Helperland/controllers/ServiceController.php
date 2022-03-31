@@ -1,14 +1,20 @@
 <?php
-include 'controller/config.php';
-class SerivceController
-{
-    function __construct()
-    {
-        include('models/helperlanddb.php');
-        $this->model = new UserModel();
+include("phpmailer/mail.php");
+
+class ServiceController{
+    public $model;
+    public $base_url = "http://localhost/Tatvasoft-Project/Project/Helperland/Helperland/";
+
+    public function __construct(){
+        include("models/Service.php");
+        $this->model = new Service();
     }
+    
+    public function service(){
+        include('View/book_service.php');
+    }
+
     public function postal(){
-        echo $_POST['postal'];
         if(isset($_POST['postal'])){
             $result = $this->model->is_validPostal($_POST);
             if(count($result) > 0){
@@ -47,6 +53,24 @@ class SerivceController
         }
     }
 
+    public function isServiceAvailable()
+    {
+        $result = [];
+        $error = "";
+        if (isset($_POST["userid"])) {
+            $userid = $_POST["userid"];
+            if (isset($_POST["adid"])) {
+                $adid = $_POST["adid"];
+                $ondate = $_POST["selecteddate"];
+                $result = $this->model->isServiceAvailable($adid, $ondate, $userid);
+                if (!$result) {
+                    $error = "Another service request has been logged for this address on this date. Please select a different date.";
+                }
+            }
+        }
+        echo json_encode(["result" => $result, "error" => $error]);
+    }
+
     public function getBodyToSendMailToSPs($serviceid)
     {
         $result = $this->model->getServiceRequestById($serviceid); 
@@ -56,7 +80,7 @@ class SerivceController
         if($status==0){ $status = "New Request"; }
         else if($status==1) { $status = "Assigned To You"; }
         $servicehourlyrate = $result["ServiceHourlyRate"];
-        $totalhour = $result["SubTotal"];
+        $totalhour = $result["ServiceHours"];
         $extrahour = $result["ExtraHours"];
         $basichour = $totalhour - $extrahour;
         $totalcost = $result["TotalCost"];
@@ -139,3 +163,5 @@ class SerivceController
 
     ';}
 }
+
+?>
