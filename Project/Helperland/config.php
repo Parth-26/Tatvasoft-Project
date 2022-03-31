@@ -15,7 +15,7 @@ class Config{
     const SMTP_EMAIL = "parthbpatel18@gnu.ac.in";
     
     //Enter password of SMTP_EMAIL to activate email functionality
-    const SMTP_PASS = "parth@26102000";
+    const SMTP_PASS = "";
     const SMTP_ADMIN = "parthbpatel26102000@gmail.com";
 
     // url constant
